@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Crear Queja</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <button item-end ion-button>Menú Principal</button>
+    </ion-item>
+  </ion-list>
+  <ion-card>
+    <ion-card-header>
+      Fecha de envío
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>Usuario</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Asunto</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Descripción</ion-label>
+          <ion-textarea rows="4" type="text"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label item-start>Foto</ion-label>
+          <button ion-button item-end>Examinar</button>
+        </ion-item>
+      </ion-list>
+      <br>
+      <div class="center">
+        <button (click)="guardarQueja()" ion-button>ENVIAR</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

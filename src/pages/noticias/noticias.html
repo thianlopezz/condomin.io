@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Noticias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-icon name="search" color="light" item-start></ion-icon>
+    <ion-input type="text" placeholder="buscar" [(ngModel)]="model.busqueda"></ion-input>
+  </ion-item>
+  <ion-grid>
+    <ion-row class="center">
+      <ion-col col-6>
+        <img src="/assets/imgs/piscina.png" alt="">
+        <p>Piscina</p>
+      </ion-col>
+      <ion-col col-6>
+        <img src="/assets/imgs/cancha.jpg" alt="">
+        <p>Cancha</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="center">
+      <ion-col col-6>
+        <img src="/assets/imgs/seguridad.jpg" alt="">
+        <p>Seguridad</p>
+      </ion-col>
+      <ion-col col-6>
+        <img src="/assets/imgs/directiva.jpg" alt="">
+        <p>Directiva</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="center">
+      <ion-col col-6>
+        <img src="/assets/imgs/mascota.png" alt="">
+        <p>Mascotas</p>
+      </ion-col>
+      <ion-col col-6>
+        <img src="/assets/imgs/agua.png" alt="">
+        <p>Agua</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

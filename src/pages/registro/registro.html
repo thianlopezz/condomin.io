@@ -6,37 +6,43 @@
 
 </ion-header>
 
-<ion-content padding>
-  <ion-card class="login">
+<ion-content>
+  <div class="back">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nombres</ion-label>
+        <ion-input type="text" [(ngModel)]="model.nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Apellidos</ion-label>
+        <ion-input type="text" [(ngModel)]="model.apellido"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Dirección</ion-label>
+        <ion-input type="text" [(ngModel)]="model.direccion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Teléfono</ion-label>
+        <ion-input type="number" [(ngModel)]="model.telefono"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="model.usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="model.contrasena"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Correo electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="model.correo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Permitir notificaciones</ion-label>
+        <ion-checkbox checked="true"></ion-checkbox>
+      </ion-item>
 
-    <ion-card-header>
-      Login
-    </ion-card-header>
-
-    <ion-card-content>
-      <ion-list>
-
-        <ion-item>
-          <ion-label stacked>Nombre</ion-label>
-          <ion-input type="text" [(ngModel)]="model.nombre"></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label stacked>Username</ion-label>
-          <ion-input type="text" [(ngModel)]="model.usuario"></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label stacked>Password</ion-label>
-          <ion-input type="password" [(ngModel)]="model.contrasena"></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <button ion-button color="primary" (click)="registro()" block>Block Button</button>
-        </ion-item>
-
-      </ion-list>
-    </ion-card-content>
-
-  </ion-card>
+      <button (click)="registro()" ion-button full>Aceptar</button>
+    </ion-list>
+  </div>
 </ion-content>

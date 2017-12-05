@@ -6,31 +6,30 @@
 
 </ion-header>
 
-<ion-content padding>
-  <br>
-  <br>
-  <br>
+<ion-content>
+  <img class="img" src="/assets/imgs/login.png" alt="">
   <ion-card class="login">
-
     <ion-card-header>
-      Login
+      <h1>Login</h1>
     </ion-card-header>
-
     <ion-card-content>
       <ion-list>
-      
         <ion-item>
-          <ion-label stacked>Username</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-icon name="contact" color="primary" item-start></ion-icon>
+          <ion-label floating>Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="model.usuario"></ion-input>
         </ion-item>
-      
         <ion-item>
-          <ion-label stacked>Password</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-icon name="key" color="primary" item-start></ion-icon>
+          <ion-label floating>Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="model.usuario"></ion-input>
         </ion-item>
-      
       </ion-list>
+      <button (click)="login()" ion-button full>INICIAR SESIÓN</button>
     </ion-card-content>
-
   </ion-card>
+  <div class="center">
+    <button ion-button color="light" (click)="goTo('registro')" clear>Regístrate</button>
+    <button ion-button color="light" (click)="goTo('contrasena')" clear>¿Olvidaste tu contraseña?</button>
+  </div>
 </ion-content>

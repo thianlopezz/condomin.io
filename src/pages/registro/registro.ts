@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { RegistroProvider } from '../../providers/registro/registro';
 import { ToastController } from 'ionic-angular';
+
+import { HomePage } from '../../pages/home/home';
 
 @Component({
   selector: 'page-registro',
@@ -11,7 +13,10 @@ export class RegistroPage {
 
   model = {};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private registroProvider: RegistroProvider, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    private registroProvider: RegistroProvider,
+    public toastCtrl: ToastController) {
   }
   
   registro(){
@@ -21,6 +26,11 @@ export class RegistroPage {
       result => {
         if (result.success) {
           this.showToast(result.mensaje);
+
+          setTimeout(() => {
+            this.navCtrl.push(HomePage);
+          }, 700);
+
         } else {
           this.showToast(result.mensaje);
         }

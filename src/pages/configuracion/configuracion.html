@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Configuración</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <h1>Usuario</h1>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="contact" color="primary" item-start></ion-icon>
+        <ion-label>Anibal Baque</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="mail" color="primary" item-start></ion-icon>
+        <ion-label>arbaque@gmail.com</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+  <h1>Contraseña</h1>
+  <ion-card-content>
+    <ion-list>
+      <button ion-item (click)="goTo('contrasena')">
+        <ion-icon name="lock" color="primary" item-start></ion-icon>
+        Cambiar Contraseña
+      </button>
+    </ion-list>
+  </ion-card-content>
+  <h1>Notificación</h1>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Permitir Notificaciones</ion-label>
+        <ion-checkbox color="primary" checked="true" item-end></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-content>

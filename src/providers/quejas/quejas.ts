@@ -4,11 +4,11 @@ import 'rxjs/add/operator/map';
 
 
 @Injectable()
-export class LoginProvider {
+export class QuejasProvider {
 
   constructor(public http: Http) { }
 
-  login(model: any) {
+  matenimiento(model: any) {
 
     return this.http.post('http://localhost:5000/api/condominio/login', model).map((response: Response) => response.json());
   }

@@ -2,36 +2,33 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 
-import { LoginProvider } from '../../providers/login/login';
-
-import { HomePage } from '../../pages/home/home';
-import { CambiarContrasenaPage } from '../../pages/cambiar-contrasena/cambiar-contrasena';
-import { RegistroPage } from '../../pages/registro/registro';
+import { QuejasProvider } from '../../providers/quejas/quejas';
+import { QuejasPage } from '../../pages/quejas/quejas';
 
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-crear-queja',
+  templateUrl: 'crear-queja.html',
 })
-export class LoginPage {
+export class CrearQuejaPage {
 
   model = {};
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    private loginProvider: LoginProvider,
+    private quejasProvider: QuejasProvider,
     public toastCtrl: ToastController) {
   }
 
-  login() {
+  guardarQueja() {
 
-    this.loginProvider.login(this.model)
+    this.quejasProvider.matenimiento(this.model)
       .subscribe(
       result => {
         if (result.success) {
           this.showToast(result.mensaje);
 
           setTimeout(() => {
-            this.navCtrl.push(HomePage);
+            this.navCtrl.push(QuejasPage);
           }, 700);
 
         } else {
@@ -42,18 +39,6 @@ export class LoginPage {
         this.showToast('Revisa que tengas una conexion a internet!');
       });
 
-  }
-
-  goTo(opcion) {
-
-    switch (opcion) {
-      case 'contrasena':
-        this.navCtrl.push(CambiarContrasenaPage);
-        break;
-      case 'registro':
-        this.navCtrl.push(RegistroPage);
-        break;
-    }
   }
 
   showToast(mensaje) {
